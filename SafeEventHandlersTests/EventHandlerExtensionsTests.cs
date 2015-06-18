@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using NUnit.Framework;
-using System.Threading;
+﻿using NUnit.Framework;
+using System;
+
 namespace Tests
 {
     [TestFixture()]
@@ -12,30 +8,11 @@ namespace Tests
     {
         private class TestEventArgs : EventArgs
         {
-
         }
 
-        private event EventHandler handler;
         private event EventHandler<TestEventArgs> genericHandler;
 
-        [TearDown]
-        public void TearDown()
-        {
-            if (handler != null)
-            {
-                foreach (var invocation in handler.GetInvocationList())
-                {
-                    handler -= (EventHandler)invocation;
-                }
-            }
-            if (genericHandler != null)
-            {
-                foreach (var invocation in genericHandler.GetInvocationList())
-                {
-                    genericHandler -= (EventHandler<TestEventArgs>)invocation;
-                }
-            }
-        }
+        private event EventHandler handler;
 
         [Test()]
         public void Fire_Test()
@@ -79,6 +56,25 @@ namespace Tests
             genericHandler.Fire(this, expectedArgs);
 
             Assert.That(eventFired);
+        }
+
+        [TearDown]
+        public void TearDown()
+        {
+            if (handler != null)
+            {
+                foreach (var invocation in handler.GetInvocationList())
+                {
+                    handler -= (EventHandler)invocation;
+                }
+            }
+            if (genericHandler != null)
+            {
+                foreach (var invocation in genericHandler.GetInvocationList())
+                {
+                    genericHandler -= (EventHandler<TestEventArgs>)invocation;
+                }
+            }
         }
     }
 }

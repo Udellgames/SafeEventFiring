@@ -1,14 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
+/// <summary>
+/// Extension methods for EventHandlers
+/// </summary>
 public static class EventHandlerExtensions
 {
     /// <summary>
-    /// Raises an event thread-safely if the event has subscribers. 
+    /// Raises an event thread-safely if the event has subscribers.
     /// </summary>
     /// <param name="handler"> The event handler to raise. </param>
     /// <param name="sender"> The object that sent this event. </param>
@@ -25,7 +24,7 @@ public static class EventHandlerExtensions
     }
 
     /// <summary>
-    /// Raises an event thread-safely if the event has subscribers. 
+    /// Raises an event thread-safely if the event has subscribers.
     /// </summary>
     /// <typeparam name="T"> The type of EventArgs the event takes. </typeparam>
     /// <param name="handler"> The event handler to raise. </param>
