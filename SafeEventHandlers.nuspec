@@ -10,7 +10,7 @@
     <projectUrl>https://github.com/Udellgames/SafeEventFiring</projectUrl>
     <iconUrl>https://raw.githubusercontent.com/Udellgames/SafeEventFiring/master/nugeticon.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>Terrarium provides a great way for developers to learn about the .NET programming model and language as they develop creatures and introduce them into a peer-to-peer ecosystem.</description>
+    <description>Extension methods that provide a simple, thread-safe mechanism for firing events.</description>
     <releaseNotes></releaseNotes>
     <copyright>Copyright &#x00A9; Udell Games.  All rights reserved.</copyright>
     <tags>event c# thread extension extension-method helper</tags>
