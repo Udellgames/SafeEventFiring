@@ -1,6 +1,8 @@
-# SafeEventFiring ![SafeEventFiring project build status](https://travis-ci.org/Udellgames/SafeEventFiring.svg?branch=master) ![SafeEventFiring NuGet package version](https://img.shields.io/nuget/v/SafeEventFiring.svg)
+# SafeEventFiring ![SafeEventFiring project build status](https://travis-ci.org/Udellgames/SafeEventFiring.svg?branch=master) [![SafeEventFiring NuGet package version](https://img.shields.io/nuget/v/SafeEventFiring.svg)](https://www.nuget.org/packages/SafeEventFiring/)
 
 Extension methods that provide a simple, thread-safe mechanism for firing events.
+
+Now available as a [NuGet Package](https://www.nuget.org/packages/SafeEventFiring/)!
 
 This repository is automatically built against the following versions of Mono:
   - beta
