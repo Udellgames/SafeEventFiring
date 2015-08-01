@@ -21,8 +21,14 @@ If your event is of type:
 
 * `EventHandler`? Use `Fire(object, EventArgs)`
 * `EventHandler<T>`? Use `Fire<T>(object, T)`
+* `PropertyChangedEventHandler`? Use `Fire(object, EventArgs)`
 
 Each method takes a reference to the calling instance and an `EventArgs` instance, or subclass of `EventArgs` in the case of `Fire<T>()`.
 
 # Notes
-Currently SafeEventFirer does not support events of a type that does not inherit from `EventHandler`. Support for the awkward `PropertyChangedEventHandler` will be coming soon.
+SafeEventFirer does not support events of a type that does not inherit from `EventHandler`, with the exception of `PropertyChangedEventHandler`, which was common enough to warrant its own extension method.
+
+# Change log
+
+* v1.1 Added support for `PropertyChangedEventHandler` instances.
+* v1.0 Initial version. Supports all instances or subclasses of `EventHandler` and `EventHandler<T>`
