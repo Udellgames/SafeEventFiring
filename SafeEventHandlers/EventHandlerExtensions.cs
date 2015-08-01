@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Diagnostics.CodeAnalysis;
 
 /// <summary>
@@ -15,6 +16,7 @@ public static class EventHandlerExtensions
     [SuppressMessage("Microsoft.Design",
         "CA1030:UseEventsWhereAppropriate",
         Justification = "This warning comes up when you use the word `Fire` in a method name. This method specifically raises events, and so does not need changing.")]
+    [DebuggerHidden]
     public static void Fire(this EventHandler handler, object sender, EventArgs args)
     {
         if (handler != null)
