@@ -3,7 +3,7 @@ using System;
 
 namespace Tests
 {
-    [TestFixture()]
+    [TestFixture]
     public class EventHandlerExtensionsTests
     {
         private class TestEventArgs : EventArgs
@@ -14,7 +14,7 @@ namespace Tests
 
         private event EventHandler handler;
 
-        [Test()]
+        [Test]
         public void Fire_Test()
         {
             var expectedArgs = EventArgs.Empty;
@@ -36,7 +36,7 @@ namespace Tests
             Assert.That(eventFired);
         }
 
-        [Test()]
+        [Test]
         public void Fire_TestGenericHandler()
         {
             var expectedArgs = new TestEventArgs();
