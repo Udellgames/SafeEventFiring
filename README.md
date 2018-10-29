@@ -2,6 +2,8 @@
 
 Extension methods that provide a simple, thread-safe mechanism for firing events.
 
+**Note:** Using C#6 or better? Use [Null Propagation](https://codeblog.jonskeet.uk/2015/01/30/clean-event-handlers-invocation-with-c-6/) (e.g. `EventHandler?.Invoke()`), it's way better!
+
 Now available as a [NuGet Package](https://www.nuget.org/packages/SafeEventFiring/)!
 
 This repository is automatically built against the following versions of Mono:
